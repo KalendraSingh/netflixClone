@@ -1,5 +1,6 @@
 import {Switch, Route, Redirect} from 'react-router-dom'
 import LoginRoute from './components/LoginRoute/index'
+import Register from './components/Register'
 import HomeSection from './components/HomeSection/index'
 import PopularSection from './components/PopularSection/index'
 import AccountSection from './components/AccountSection/index'
@@ -12,6 +13,7 @@ import './App.css'
 const App = () => (
   <Switch>
     <Route exact path="/login" component={LoginRoute} />
+    <Route exact path="/register" component={Register} />
     <ProtectedRoute exact path="/" component={HomeSection} />
     <ProtectedRoute exact path="/popular" component={PopularSection} />
     <ProtectedRoute exact path="/account" component={AccountSection} />
